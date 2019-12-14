@@ -11,6 +11,16 @@ import UIKit
 struct ImageViewModel {
     let urlString: String
     
+    var filteredURL: String? {
+        var component = URLComponents(string: self.urlString)
+        let host = component?.host
+        let domain = host?.components(separatedBy: ".")
+        let characterSet = NSCharacterSet.decimalDigits.inverted
+        let filteredDomain = domain?.filter { $0.rangeOfCharacter(from: characterSet) != nil }
+        let filteredHost = filteredDomain?.joined(separator: ".")
+        component?.host = filteredHost
+        return component?.url?.absoluteString
+    }
 }
 
 extension ImageViewModel: CollectionViewCellBuildable {

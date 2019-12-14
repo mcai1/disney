@@ -38,7 +38,7 @@ class FullViewImageViewController: UIViewController {
     }
     
     func updateImage() {
-        let downloader = ImageDownloader(url: self.viewModel?.urlString)
+        let downloader = ImageDownloader(url: self.viewModel?.filteredURL)
         downloader.download { (image) in
             self.imageView?.image = image
         }
