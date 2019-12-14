@@ -1,5 +1,5 @@
 //
-//  ImageServiceController.swift
+//  ImageService.swift
 //  Disney
 //
 //  Created by Matthew cai on 12/14/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-enum ImageServiceControllerError: Error {
+enum ImageServiceError: Error {
     case unableGenerateURL, noData
 }
 
-struct ImageServiceController {
+struct ImageService {
     
     let count: Int
     let urlSession = URLSession.shared
@@ -21,12 +21,12 @@ struct ImageServiceController {
     
     func fetch(completion: @escaping (ImageSet?, Error?) -> Void) {
         guard let url = buildURL() else {
-            completion(nil, ImageServiceControllerError.unableGenerateURL)
+            completion(nil, ImageServiceError.unableGenerateURL)
             return
         }
         self.urlSession.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
-                completion(nil, ImageServiceControllerError.noData)
+                completion(nil, ImageServiceError.noData)
                 return
             }
             let decoder = JSONDecoder()

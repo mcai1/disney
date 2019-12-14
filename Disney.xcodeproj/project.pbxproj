@@ -16,8 +16,14 @@
 		25B4707623A5866C009E40F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B4707423A5866C009E40F9 /* LaunchScreen.storyboard */; };
 		25B4708123A5866D009E40F9 /* DisneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4708023A5866D009E40F9 /* DisneyTests.swift */; };
 		25B4708C23A5866D009E40F9 /* DisneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4708B23A5866D009E40F9 /* DisneyUITests.swift */; };
-		25B4709A23A5874D009E40F9 /* ImageServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4709923A5874D009E40F9 /* ImageServiceController.swift */; };
+		25B4709A23A5874D009E40F9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4709923A5874D009E40F9 /* ImageService.swift */; };
 		25B4709C23A587F1009E40F9 /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4709B23A587F1009E40F9 /* ImageSet.swift */; };
+		25B4709E23A58A6B009E40F9 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4709D23A58A6B009E40F9 /* ImageCollectionViewController.swift */; };
+		25B470A823A58BE7009E40F9 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B470A723A58BE7009E40F9 /* UIView+Extension.swift */; };
+		25B470AF23A58CB2009E40F9 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B470AE23A58CB2009E40F9 /* ImageViewModel.swift */; };
+		25B470B123A58D43009E40F9 /* ImageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B470B023A58D43009E40F9 /* ImageSetViewModel.swift */; };
+		25B470B723A59094009E40F9 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B470B623A59094009E40F9 /* ImageDownloader.swift */; };
+		25B470B823A5917F009E40F9 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B470B423A58FEA009E40F9 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +59,14 @@
 		25B4708723A5866D009E40F9 /* DisneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B4708B23A5866D009E40F9 /* DisneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyUITests.swift; sourceTree = "<group>"; };
 		25B4708D23A5866D009E40F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25B4709923A5874D009E40F9 /* ImageServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceController.swift; sourceTree = "<group>"; };
+		25B4709923A5874D009E40F9 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		25B4709B23A587F1009E40F9 /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
+		25B4709D23A58A6B009E40F9 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		25B470A723A58BE7009E40F9 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		25B470AE23A58CB2009E40F9 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		25B470B023A58D43009E40F9 /* ImageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetViewModel.swift; sourceTree = "<group>"; };
+		25B470B423A58FEA009E40F9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		25B470B623A59094009E40F9 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +117,14 @@
 		25B4706523A5866B009E40F9 /* Disney */ = {
 			isa = PBXGroup;
 			children = (
+				25B470AD23A58C89009E40F9 /* Service */,
+				25B470AC23A58C1B009E40F9 /* Model */,
+				25B470AB23A58C14009E40F9 /* Controller */,
+				25B470AA23A58C0D009E40F9 /* Extension */,
+				25B470A923A58C01009E40F9 /* Cell */,
 				25B4706623A5866B009E40F9 /* AppDelegate.swift */,
 				25B4706823A5866B009E40F9 /* SceneDelegate.swift */,
 				25B4706A23A5866B009E40F9 /* ViewController.swift */,
-				25B4709923A5874D009E40F9 /* ImageServiceController.swift */,
-				25B4709B23A587F1009E40F9 /* ImageSet.swift */,
 				25B4706C23A5866B009E40F9 /* Main.storyboard */,
 				25B4707223A5866C009E40F9 /* Assets.xcassets */,
 				25B4707423A5866C009E40F9 /* LaunchScreen.storyboard */,
@@ -135,6 +150,49 @@
 				25B4708D23A5866D009E40F9 /* Info.plist */,
 			);
 			path = DisneyUITests;
+			sourceTree = "<group>";
+		};
+		25B470A923A58C01009E40F9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				25B470B423A58FEA009E40F9 /* ImageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		25B470AA23A58C0D009E40F9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				25B470A723A58BE7009E40F9 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		25B470AB23A58C14009E40F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25B4709D23A58A6B009E40F9 /* ImageCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		25B470AC23A58C1B009E40F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25B4709B23A587F1009E40F9 /* ImageSet.swift */,
+				25B470AE23A58CB2009E40F9 /* ImageViewModel.swift */,
+				25B470B023A58D43009E40F9 /* ImageSetViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		25B470AD23A58C89009E40F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				25B4709923A5874D009E40F9 /* ImageService.swift */,
+				25B470B623A59094009E40F9 /* ImageDownloader.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,11 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B4709E23A58A6B009E40F9 /* ImageCollectionViewController.swift in Sources */,
+				25B470B123A58D43009E40F9 /* ImageSetViewModel.swift in Sources */,
 				25B4709C23A587F1009E40F9 /* ImageSet.swift in Sources */,
+				25B470A823A58BE7009E40F9 /* UIView+Extension.swift in Sources */,
 				25B4706B23A5866B009E40F9 /* ViewController.swift in Sources */,
 				25B4706723A5866B009E40F9 /* AppDelegate.swift in Sources */,
+				25B470B823A5917F009E40F9 /* ImageCollectionViewCell.swift in Sources */,
+				25B470AF23A58CB2009E40F9 /* ImageViewModel.swift in Sources */,
 				25B4706923A5866B009E40F9 /* SceneDelegate.swift in Sources */,
-				25B4709A23A5874D009E40F9 /* ImageServiceController.swift in Sources */,
+				25B4709A23A5874D009E40F9 /* ImageService.swift in Sources */,
+				25B470B723A59094009E40F9 /* ImageDownloader.swift in Sources */,
 				25B4707123A5866B009E40F9 /* Disney.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
