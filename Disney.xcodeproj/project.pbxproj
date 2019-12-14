@@ -16,6 +16,8 @@
 		25B4707623A5866C009E40F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B4707423A5866C009E40F9 /* LaunchScreen.storyboard */; };
 		25B4708123A5866D009E40F9 /* DisneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4708023A5866D009E40F9 /* DisneyTests.swift */; };
 		25B4708C23A5866D009E40F9 /* DisneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4708B23A5866D009E40F9 /* DisneyUITests.swift */; };
+		25B4709A23A5874D009E40F9 /* ImageServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4709923A5874D009E40F9 /* ImageServiceController.swift */; };
+		25B4709C23A587F1009E40F9 /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4709B23A587F1009E40F9 /* ImageSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		25B4708723A5866D009E40F9 /* DisneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B4708B23A5866D009E40F9 /* DisneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyUITests.swift; sourceTree = "<group>"; };
 		25B4708D23A5866D009E40F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B4709923A5874D009E40F9 /* ImageServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceController.swift; sourceTree = "<group>"; };
+		25B4709B23A587F1009E40F9 /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				25B4706623A5866B009E40F9 /* AppDelegate.swift */,
 				25B4706823A5866B009E40F9 /* SceneDelegate.swift */,
 				25B4706A23A5866B009E40F9 /* ViewController.swift */,
+				25B4709923A5874D009E40F9 /* ImageServiceController.swift */,
+				25B4709B23A587F1009E40F9 /* ImageSet.swift */,
 				25B4706C23A5866B009E40F9 /* Main.storyboard */,
 				25B4707223A5866C009E40F9 /* Assets.xcassets */,
 				25B4707423A5866C009E40F9 /* LaunchScreen.storyboard */,
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B4709C23A587F1009E40F9 /* ImageSet.swift in Sources */,
 				25B4706B23A5866B009E40F9 /* ViewController.swift in Sources */,
 				25B4706723A5866B009E40F9 /* AppDelegate.swift in Sources */,
 				25B4706923A5866B009E40F9 /* SceneDelegate.swift in Sources */,
+				25B4709A23A5874D009E40F9 /* ImageServiceController.swift in Sources */,
 				25B4707123A5866B009E40F9 /* Disney.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
