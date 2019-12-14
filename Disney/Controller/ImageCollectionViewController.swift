@@ -35,16 +35,6 @@ class ImageCollectionViewController: UICollectionViewController {
         self.collectionView.addGestureRecognizer(longPress)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -70,6 +60,13 @@ class ImageCollectionViewController: UICollectionViewController {
         if (indexPath.row == lastItem - 1 ) {
             update()
         }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewModel = self.viewModel?.imageViewModels?[indexPath.row]
+        let viewController = FullViewImageViewController()
+        viewController.viewModel = viewModel
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc func longPress(gesture : UILongPressGestureRecognizer) {
