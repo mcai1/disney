@@ -30,6 +30,7 @@ class ImageDownloader: NSObject, URLSessionDelegate {
                 DispatchQueue.main.async {
                     if let image = UIImage(data: data) {
                         completionHandler(image) // could add default images
+                        // also can cache image
                         return
                     }
                 }
