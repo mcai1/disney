@@ -16,6 +16,7 @@ class FullViewImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black
         setup()
     }
     
@@ -33,8 +34,7 @@ class FullViewImageViewController: UIViewController {
         self.imageView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
         self.imageView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
         self.imageView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
-
-        
+        self.imageView?.contentMode = .scaleAspectFit
     }
     
     func updateImage() {
