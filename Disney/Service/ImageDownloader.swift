@@ -29,7 +29,7 @@ class ImageDownloader: NSObject, URLSessionDelegate {
             if let data = data {
                 DispatchQueue.main.async {
                     if let image = UIImage(data: data) {
-                        completionHandler(image)
+                        completionHandler(image) // could add default images
                         return
                     }
                 }
