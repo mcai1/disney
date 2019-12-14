@@ -14,13 +14,12 @@ enum ImageServiceError: Error {
 
 struct ImageService {
     
-    let count: Int
     let urlSession = URLSession.shared
     private let key = "count"
     private let baseURL = "https://pugme.herokuapp.com/bomb"
     
-    func fetch(completion: @escaping (ImageSet?, Error?) -> Void) {
-        guard let url = buildURL() else {
+    func fetch(count: Int, completion: @escaping (ImageSet?, Error?) -> Void) {
+        guard let url = buildURL(count: count) else {
             completion(nil, ImageServiceError.unableGenerateURL)
             return
         }
@@ -35,8 +34,8 @@ struct ImageService {
         }.resume()
     }
     
-    func buildURL() -> URL? {
-        let queryItem = URLQueryItem(name: self.key, value: String(self.count))
+    func buildURL(count: Int) -> URL? {
+        let queryItem = URLQueryItem(name: self.key, value: String(count))
         var urlComponent = URLComponents(string: self.baseURL)
         urlComponent?.queryItems = [queryItem]
         return urlComponent?.url

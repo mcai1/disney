@@ -20,7 +20,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     func populate(viewModel: ImageViewModel) {
         self.viewModel = viewModel
-        
     }
     
     override func prepareForReuse() {

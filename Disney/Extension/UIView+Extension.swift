@@ -27,3 +27,14 @@ extension ReusableViewIdentifable where Self: UIView {
         return String(describing: self)
     }
 }
+
+
+protocol CollectionViewCellBuildable {
+    func cellInstance(_ collectionView: UICollectionviewDequeueReusable, indexPath: IndexPath) -> UICollectionViewCell
+}
+
+protocol UICollectionviewDequeueReusable {
+    func dequeueReusableCell(withReuseIdentifier identifier: String, for indexPath: IndexPath) -> UICollectionViewCell
+}
+
+extension UICollectionView: UICollectionviewDequeueReusable { }

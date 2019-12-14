@@ -9,9 +9,17 @@
 import UIKit
 
 struct ImageSetViewModel {
-    let imageSet: ImageSet
     
-    var imageViewModels: [ImageViewModel] {
-        return self.imageSet.pugs.map { ImageViewModel(urlString: $0) }
+    let count: Int
+    let imageSet: ImageSet?
+    
+    private let countPerPage = 50
+    
+    var imageViewModels: [ImageViewModel]? {
+        return self.imageSet?.pugs.map { ImageViewModel(urlString: $0) }
+    }
+    
+    var nextCount: Int {
+        return count + countPerPage
     }
 }
